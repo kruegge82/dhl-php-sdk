@@ -80,7 +80,12 @@ class Consignee extends SendPerson {
 			$class->state = $this->getState();
 		if($this->getCountry() !== null)
 			$class->country = $this->getCountry();
-
+		if($this->getContactName() !== null)
+			$class->contactName = $this->getContactName();
+		if($this->getPhone() !== null)
+			$class->phone = $this->getPhone();
+		if($this->getEmail() !== null)
+			$class->email = $this->getEmail();
 		return $class;
 	}
 

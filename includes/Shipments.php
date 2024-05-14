@@ -249,7 +249,7 @@ class Shipments {
 	public function setShipDate($shipDate, bool $useIntTime = false) {
 		if($useIntTime) {
 			// Convert Time-Stamp to Date
-			$shipDate = date('Y-m-d\TH:i:s\Z', $shipDate);
+			$shipDate = date('Y-m-d', $shipDate);
 
 			if($shipDate === false)
 				$shipDate = null;
@@ -331,7 +331,7 @@ class Shipments {
 		if($weekDay == 0)
 			$now += 86400; // Increase Day by 1 if Sunday
 
-		return date('Y-m-d\TH:i:s\Z', $now);
+		return date('Y-m-d', $now);
 	}
 
 

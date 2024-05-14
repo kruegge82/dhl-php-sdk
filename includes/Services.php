@@ -211,7 +211,7 @@ class Services {
 	public function setPreferredDay(string $preferredDay, bool $useIntTime = false): void
 	{
 		if($useIntTime) {
-			$preferredDay = date('Y-m-d\TH:i:s\Z', $preferredDay);
+			$preferredDay = date('Y-m-d', $preferredDay);
 
 			if($preferredDay === false)
 				$preferredDay = null;

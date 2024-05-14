@@ -49,6 +49,9 @@ class Shipper extends SendPerson {
 			$class->contactName = $this->getContactName();
 		if($this->getEmail() !== null)
 			$class->email = $this->getEmail();
+		if($this->getPhone() !== null)
+			$class->phone = $this->getPhone();
+
 		if($this->getShipperRef() !== null)
 			$class->shipperRef = $this->getShipperRef();
 
