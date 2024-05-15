@@ -434,7 +434,7 @@ class LabelData extends Version implements LabelResponse {
 			if (isset($response->validationMessages)) {
 				if (is_array($response->validationMessages))
 					$this->setStatusMessage(implode('; ', array_map(function ($entry) {
-						return $entry->validationMessage;
+						return $entry->validationMessage.": ".$entry->property." (".$entry->validationState.")";
 					}, $response->validationMessages)));
 				else
 					$this->setStatusMessage($response->validationMessages);

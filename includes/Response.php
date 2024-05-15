@@ -427,10 +427,12 @@ class Response extends Version implements LabelResponse {
 		} else if(isset($response->statusCode)) {
 			if(isset($response->statusCode ))
 				$this->setStatusCode((int) $response->statusCode);
-			if(isset($response->title))
-				$this->setStatusText($response->title);
-			if(isset($response->detail))
-				$this->setStatusMessage($response->detail);
+			if(isset($response->statusText))
+				$this->setStatusText($response->statusText);
+			if(isset($response->statusMessage))
+				$this->setStatusMessage($response->statusMessage);
+			//if(isset($response->detail))
+			//	$this->setStatusMessage($response->detail);
 		}
 
 

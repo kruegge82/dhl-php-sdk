@@ -18,7 +18,7 @@ use Jahn\DHL\Details;
 
 $sandbox = true; // Uses the normal test user
 //$sandbox = Credentials::DHL_BUSINESS_TEST_USER_THERMO; // Uses the thermo-printer test user
-$version = '2.2.1'; // Can be specified or just left out (uses newest by default)
+$version = '2.1.8'; // Can be specified or just left out (uses newest by default)
 $reference = 'Reference'; // You can use anything here (max 35 chars)
 $apiKey = ''; // Set here your ApiKey from developer.dhl.com
 // Set this to true then you can skip set the "User", "Signature" and "EKP" (Just for test-Mode) else false or empty
