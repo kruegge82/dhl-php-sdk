@@ -781,7 +781,7 @@ class BusinessShipment extends Version {
 	 * @return Object - DHL-Response
 	 */
 	public function sendShipmentRequest($data, $validate='false') {
-print_r($data);
+
 		if($this->isTest())
 			$location = self::DHL_SANDBOX_URL;
 		else
@@ -830,7 +830,6 @@ print_r($data);
 			return false;
 		} else {
 			$response = json_decode(json_encode(json_decode($response, true)));
-			print_r($response);
 			return new Response($this->getVersion(), $response);
 		}
 		return new Response($this->getVersion(), $response);
