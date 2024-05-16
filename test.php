@@ -131,6 +131,20 @@ $labelFormat->setCombinedPrinting('false'); // Here you can set if all labels sh
 $labelFormat->setLabelResponseType("URL"); // URL or INCLUDE
 $labelFormat->setDocFormat("PDF");
 
+// Details For export Documents
+$exportDocument = new Customs();
+$exportDocument->setPostalCharges("0.00", "EUR");
+$exportDocument->setExportType('COMMERCIAL_GOODS');
+$exportDocument->setInvoiceNo('Invoice Number');
+$exportDocument->setOfficeOfOrigin('CityOfOrigin');
+$exportDocument->setExportDescription('Permanent');
+//$itemDescription,$countryOfOrigin,$hsCode,$packagedQuantity,$itemWeight,$itemWeightUom,$itemValue,$itemValueCurrency
+$ExportDocPosition = new ExportDocPosition('ProductName', 'DEU', '45031010', 2, 100, "g", 5.12, "EUR");
+$exportDocument->addItem($ExportDocPosition);
+$ExportDocPosition = new ExportDocPosition('ProductName2', 'DEU', '45031011', 1, 105, "g", 3.12, "EUR");
+$exportDocument->addItem($ExportDocPosition);
+$shipments->setCustoms($exportDocument);
+
 // Required just Credentials also accept Test-Mode and Version
 $dhl = new BusinessShipment($credentials, /*Optional*/$sandbox, /*Optional*/$version);
 $dhl->setProfile('STANDARD_GRUPPENPROFIL'); // here you can set the group profile name if needed
