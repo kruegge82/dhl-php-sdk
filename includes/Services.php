@@ -617,8 +617,10 @@ class Services {
 			$class->preferredNeighbour = $this->getPreferredNeighbour();
 		if($this->getPreferredLocation() !== null)
 			$class->preferredLocation = $this->getPreferredLocation();
-		if($this->getShippingConfirmation() !== null)
+		if($this->getShippingConfirmation() !== null) {
+			$class->shippingConfirmation = new StdClass;
 			$class->shippingConfirmation->email = $this->getShippingConfirmation();
+		}
 		if($this->getVisualCheckOfAge() !== null)
 			$class->visualCheckOfAge = $this->getVisualCheckOfAge();
 		if($this->getNamedPersonOnly() !== null)
