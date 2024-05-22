@@ -117,7 +117,7 @@ class ExportDocPosition {
 	 * @param string $itemDescription - Description
 	 */
 	public function setItemDescription($itemDescription) {
-		$this->itemDescription = $itemDescription;
+		$this->itemDescription = substr($itemDescription,0,50);
 	}
 
 	/**
