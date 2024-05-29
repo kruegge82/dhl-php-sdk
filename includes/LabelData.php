@@ -56,6 +56,13 @@ class LabelData extends Version implements LabelResponse {
 	private $shipmentNumber = null;
 
 	/**
+	 * RoutingCode
+	 *
+	 * @var null|string $routingCode - routingCode | null if not set
+	 */
+	private $routingCode = null;
+
+	/**
 	 * Return Shipment-Number
 	 *
 	 * @var null|string $returnShipmentNumber - Return Shipment-Number | null if not set
@@ -224,6 +231,16 @@ class LabelData extends Version implements LabelResponse {
 	 */
 	public function setShipmentNumber($shipmentNumber) {
 		$this->shipmentNumber = $shipmentNumber;
+	}
+
+	public function getRoutingCode(): ?string
+	{
+		return $this->routingCode;
+	}
+
+	public function setRoutingCode(?string $routingCode): void
+	{
+		$this->routingCode = $routingCode;
 	}
 
 	/**
@@ -460,7 +477,10 @@ class LabelData extends Version implements LabelResponse {
 		// Get Shipment-Number
 		if (isset($response->shipmentNo))
 			$this->setShipmentNumber((string)$response->shipmentNo);
-
+		// Get RoutingCode
+		if (isset($response->routingCode))
+			$this->setRoutingCode((string)$response->routingCode);
+		// Get Shipment-Number
 		if (isset($response->returnShipmentNo))
 			$this->setReturnShipmentNumber((string)$response->returnShipmentNo);
 

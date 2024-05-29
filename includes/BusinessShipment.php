@@ -42,7 +42,7 @@ class BusinessShipment extends Version {
 	/**
 	 * Newest-Version
 	 */
-	const NEWEST_VERSION = '2.1.8';
+	const NEWEST_VERSION = '2.1.9';
 
 	/**
 	 * Response-Type URL
