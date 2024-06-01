@@ -126,6 +126,18 @@ class Response extends Version implements LabelResponse {
 	}
 
 	/**
+	 * Getter for Routing-Code
+	 *
+	 * @return null|string - Routing Code or null if not set
+	 */
+	public function getRoutingCode() {
+		if($this->countLabelData() > 0)
+			return $this->getLabelData(0)->getRoutingCode();
+
+		return null;
+	}
+
+	/**
 	 * Getter for Return-Shipment-Number
 	 *
 	 * @return null|string - Return-Shipment-Number or null if not set
