@@ -15,6 +15,8 @@ use Jahn\DHL\Services;
 use Jahn\DHL\Shipments;
 use Jahn\DHL\Customs;
 use Jahn\DHL\Details;
+use Jahn\DHL\ExportDocPosition;
+
 
 $sandbox = true; // Uses the normal test user
 //$sandbox = Credentials::DHL_BUSINESS_TEST_USER_THERMO; // Uses the thermo-printer test user
