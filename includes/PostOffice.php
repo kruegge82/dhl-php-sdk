@@ -115,7 +115,8 @@ class  PostOffice extends Consignee {
 		$class->name = $this->getName();
 		$class->email = $this->getEmail();
 		$class->retailID = $this->getRetailID();
-		$class->postNumber = $this->getPostNumber();
+		if(!empty($this->getPostNumber()))
+			$class->postNumber = $this->getPostNumber();
 		$class->postalCode = $this->getPostalCode();
 		$class->city = $this->getCity();
 		$class->country = $this->getCountry();
