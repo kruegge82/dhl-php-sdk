@@ -74,7 +74,8 @@ class Consignee extends SendPerson {
 			$class->additionalAddressInformation2 = $this->getAdditionalAddressInformation2();
 		if($this->getadditionalAddressInformation3() !== null)
 			$class->additionalAddressInformation3 = $this->getAdditionalAddressInformation3();
-		$class->postalCode = $this->getPostalCode();
+		if(!empty($this->getPostalCode()))
+			$class->postalCode = $this->getPostalCode();
 		$class->city = $this->getCity();
 		if($this->getState() !== null)
 			$class->state = $this->getState();
