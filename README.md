@@ -1,5 +1,5 @@
 # DEPRECATED
-updated to the new REST API [DHL PHP REST API](https://github.com/kruegge82/dhl-php-rest-sdk)
+updated to the new REST API -> [DHL PHP REST API](https://github.com/kruegge82/dhl-php-rest-sdk)
 
 # DHL PHP SDK
 
