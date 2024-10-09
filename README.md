@@ -1,3 +1,6 @@
+# DEPRECATED
+updated to the new REST API [DHL PHP REST API](https://github.com/kruegge82/dhl-php-rest-sdk)
+
 # DHL PHP SDK
 
 This *unofficial* library is wrapping some functions of the DHL REST API in order to easy create/delete shipments and labels.
